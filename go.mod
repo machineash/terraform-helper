@@ -1,4 +1,4 @@
-module github.com/machineash/tfhelper-v2
+module github.com/machineash/terraform-helper
 
 go 1.25.1
 
