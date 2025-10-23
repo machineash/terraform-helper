@@ -1,7 +1,7 @@
-# Terraform Helper (v2)
+# Terraform Helper
 
 ## Overview
-Terraform-Helper-v2 is a Go-based command-line tool built with **Cobra**.
+terraform-helper is a Go-based command-line tool built with **Cobra**.
 
 It's the second project in a three-part series exploring Terraform, Go, and Azure integration.
 
