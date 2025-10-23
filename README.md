@@ -1,31 +1,31 @@
 # Terraform Helper
 
 ## Overview
-terraform-helper is a Go-based command-line tool built with **Cobra**.
+terraform-helper is a Go-based command-line tool built with **Cobra** to streamline common Terraform workflows.
 
-It's the second project in a three-part series exploring Terraform, Go, and Azure integration.
+It's the second project in a three-part series focused on infrastructure automation with Terraform, Go, and Azure SDKs.
 
-The goal is to create a lightweight CLI that wraps Terraform workflows, starting with setup and validation, then expanding to ```plan```, ```apply```, and log management.
+This phase established the core command framework and full Terraform lifecycle control with logging for each run to simplify troubleshooting and auditing.
 
-## Current Phase: Scaffold Complete
-Phase 1 established the foundation: 
-- Go module initialized and structured with Cobra
-- Root command generated (cmd / root.go)
-- Builds and runs successfully inside Azure Cloud Shell
-- Repository connected to GitHub for version control
+## Current Features (Phase 2 Complete)
 
-At this stage, the CLI runs and responds to help output, confirming the framework is wired correctly. 
+Commands:
+- ```terraform-helper plan```: Runs ```terraform plan``` to preview changes.
+- ```terraform-helper apply```: Runs ```terraform apply -auto-approve``` to deploy infrastructure.
+- ```terraform-helper destroy```: Runs ```terraform destroy -auto-approve``` to remove infrastructure.
 
-## Next Steps
-- Phase 2: Add first Terraform commands (plan, apply, destroy)
-- Phase 3: Integrate Azure SDK for monitoring and API automation
-- Write usage documentation and tests once commands are functional
+Each command streams Terraform output to the console and writes a timestamped log file under /logs. 
+
+## Next Steps (Phase 3 Preview)
+- Integrate the Azure Go SDK to query or validate deployed resources.
+- Add environment validation before Terraform runs.
+- Improve log formatting with JSON output and error levels.
 
 ## Project Context
-This tool sits between two other learning projects:
-1. Project 1 - Terraform + Azure Lab: declarative IaC foundation
-2. Project 2 - Terraform Helper (this): Go CLI engineering layer
-3. Project 3 - Azure API Utility: direct cloud API interaction and telemetry
+This tool is part of a three-project sequence:
+1. Project 1 - Terraform + Azure Lab: foundational IaC setup (RG, VNet, Subnet).
+2. Project 2 - Terraform Helper (this): Go CLI automation layer for Terraform.
+3. Project 3 - Azure API Utility: direct Azure SDK and API interaction for telemetry and validation.
 
 Together, they demonstrate full-stack understanding of infrastructure creation, automation, and platform integration.
 
